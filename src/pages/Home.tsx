@@ -5,12 +5,11 @@ import Footer from '../components/Footer';
 import HappyClient from '../components/HappyClient';
 import Navbar from '../components/Navbar';
 import SkillSection from '../components/SkillSection';
-
 import '../assets/css/Home.css';
 
 const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '../assets/cv/Muhammad_Hammad_Resume.pdf';
+    link.href = '/cv/Muhammad_Hammad_Resume.pdf';
     link.download = 'Muhammad_Hammad_CV.pdf';
     document.body.appendChild(link);
     link.click();

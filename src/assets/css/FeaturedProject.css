@@ -1,0 +1,282 @@
+.fp-section {
+    padding: 0 2.5rem 4rem;
+}
+
+.fp-header {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    margin-bottom: 3rem;
+}
+
+.fp-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.66rem;
+    color: var(--neon);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.fp-glow {
+    width: 60px;
+    height: 2px;
+    background: var(--neon);
+    margin-bottom: 1.25rem;
+    border-radius: 20px;
+    box-shadow: 0 0 18px rgba(23, 192, 253, 0.5);
+}
+
+.fp-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+/* ───────── Grid ───────── */
+.fp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ───────── Card ───────── */
+.fp-card {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+
+    /* entrance */
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.fp-card.fp-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* top radial glow */
+.fp-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at top left,
+        rgba(23, 192, 253, 0.07) 0%,
+        transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* gradient border glow */
+.fp-card::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+        135deg,
+        rgba(23, 192, 253, 0.2),
+        rgba(124, 58, 237, 0.08),
+        transparent
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.fp-card:hover {
+    border-color: rgba(23, 192, 253, 0.28);
+    box-shadow: 0 28px 56px rgba(0, 0, 0, 0.22);
+    transform: translateY(-6px);
+}
+
+.fp-card:hover::before {
+    opacity: 1;
+}
+
+/* ───────── Card Top ───────── */
+.fp-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.fp-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--neon);
+    opacity: 0.65;
+    letter-spacing: 1px;
+}
+
+.fp-type-badge {
+    font-size: 0.6rem;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+/* ───────── Card Name ───────── */
+.fp-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+    transition: color 0.25s ease;
+}
+
+.fp-card:hover .fp-name {
+    color: var(--neon);
+}
+
+/* ───────── Description ───────── */
+.fp-desc {
+    font-size: 0.86rem;
+    color: var(--muted);
+    line-height: 1.8;
+    flex: 1;
+}
+
+/* ───────── Techs ───────── */
+.fp-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.fp-tech {
+    font-size: 0.6rem;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.4px;
+    color: var(--neon);
+    background: rgba(23, 192, 253, 0.07);
+    border: 1px solid rgba(23, 192, 253, 0.15);
+    padding: 4px 10px;
+    border-radius: 999px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.fp-card:hover .fp-tech {
+    background: rgba(23, 192, 253, 0.11);
+    border-color: rgba(23, 192, 253, 0.25);
+}
+
+/* ───────── Actions ───────── */
+.fp-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+.fp-btn {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--muted);
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.fp-btn:hover {
+    color: var(--neon);
+    transform: translateY(-2px);
+}
+
+.fp-btn i {
+    font-size: 0.95rem;
+    transition: transform 0.25s ease;
+}
+
+.fp-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* ───────── Light Mode ───────── */
+[data-theme='light'] .fp-card {
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+}
+
+[data-theme='light'] .fp-card:hover {
+    box-shadow: 0 28px 56px rgba(15, 23, 42, 0.1);
+}
+
+[data-theme='light'] .fp-type-badge {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* ───────── Responsive ───────── */
+@media (max-width: 1024px) {
+    .fp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .fp-section {
+        padding: 0 1.5rem 3rem;
+    }
+
+    .fp-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.1rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .fp-section {
+        padding: 0 1.25rem 2.5rem;
+    }
+
+    .fp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fp-card {
+        padding: 1.5rem;
+    }
+}

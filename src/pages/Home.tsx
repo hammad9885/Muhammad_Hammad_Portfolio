@@ -119,7 +119,7 @@ export default function Home() {
                 <div className="mh-hero-inner">
                     <div className="mh-hero-tag">
                         <span className="mh-dot" />
-                        Available for Work
+                        Let's Build Something Great Together
                     </div>
 
                     <h1>

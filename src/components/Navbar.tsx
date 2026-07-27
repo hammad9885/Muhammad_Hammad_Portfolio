@@ -1,166 +1,152 @@
+import { useEffect, useState } from 'react';
 import {
-    House,
-    User,
-    Code2,
-    FolderKanban,
-    Briefcase,
-    MessageCircle,
-    Mail,
-    SunMedium,
-    Moon,
+  Sun,
+  Moon,
+  ArrowUpRight,
+  Menu,
+  X,
+  User,
+  Code2,
+  FolderKanban,
+  Briefcase,
+  Building2,
+  Terminal,
+  Mail,
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import '../assets/css/Navbar.css'
+import '../assets/css/Navbar.css';
 
-const Navbar = ({
-    theme,
-    setTheme,
-}: {
-    theme: 'dark' | 'light';
-    setTheme: React.Dispatch<React.SetStateAction<'dark' | 'light'>>;
-}) => {
-    const [activeSection, setActiveSection] = useState('home');
-    // const [theme, setTheme] = useState('dark');
+interface NavbarProps {
+  theme: 'dark' | 'light';
+  setTheme: React.Dispatch<React.SetStateAction<'dark' | 'light'>>;
+}
 
-    // useEffect(() => {
-    //     document.body.setAttribute('data-theme', theme);
-    // }, [theme]);
+const sections = [
+  { id: 'about', label: 'About', icon: <User size={15} /> },
+  { id: 'skills', label: 'Skills', icon: <Code2 size={15} /> },
+  { id: 'experience', label: 'Experience', icon: <Briefcase size={15} /> },
+  { id: 'projects', label: 'Projects', icon: <FolderKanban size={15} /> },
+  { id: 'enterprise', label: 'Enterprise', icon: <Building2 size={15} /> },
+  { id: 'terminal', label: 'Terminal', icon: <Terminal size={15} /> },
+  { id: 'contact', label: 'Contact', icon: <Mail size={15} /> },
+];
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const sections = [
-                'about',
-                'skills',
-                'projects',
-                'experience',
-                'happyClients',
-                'contact',
-            ];
+export default function Navbar({ theme, setTheme }: NavbarProps) {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-            for (const id of sections) {
-                const el = document.getElementById(id);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
 
-                if (el) {
-                    const rect = el.getBoundingClientRect();
+      const sectionIds = sections.map((s) => s.id);
 
-                    if (rect.top <= 120 && rect.bottom >= 120) {
-                        setActiveSection(id);
-
-                        return;
-                    }
-                }
-            }
-
-            setActiveSection('home');
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const scrollTo = (id: string) => {
-        const el = document.getElementById(id);
-
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
         if (el) {
-            el.scrollIntoView({
-                behavior: 'smooth',
-            });
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 150) {
+            setActiveSection(sectionIds[i]);
+            return;
+          }
         }
+      }
+      setActiveSection('');
     };
 
-    const navLinks = [
-        {
-            label: 'About',
-            id: 'about',
-            icon: <User size={16} />,
-        },
-        {
-            label: 'Skills',
-            id: 'skills',
-            icon: <Code2 size={16} />,
-        },
-        {
-            label: 'Projects',
-            id: 'projects',
-            icon: <FolderKanban size={16} />,
-        },
-        {
-            label: 'Experience',
-            id: 'experience',
-            icon: <Briefcase size={16} />,
-        },
-        {
-            label: 'Clients',
-            id: 'happyClients',
-            icon: <MessageCircle size={16} />,
-        },
-        {
-            label: 'Contact',
-            id: 'contact',
-            icon: <Mail size={16} />,
-        },
-    ];
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return (
-        <nav className="mh-nav">
-            <div className="mh-left">MH.dev</div>
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
 
-            <div className="mh-nav-center">
-                <button
-                    className={`mh-nav-link ${
-                        activeSection === 'home' ? 'active' : ''
-                    }`}
-                    onClick={() =>
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth',
-                        })
-                    }
-                >
-                    <House size={16} />
-                </button>
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileOpen(false);
+  };
 
-                <div className="mh-divider"></div>
+  return (
+    <>
+      <nav className={`navbar${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
+        <button className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top">
+          <span className="navbar-logo-dot" />
+          MH
+        </button>
 
-                {navLinks.map((link) => (
-                    <button
-                        key={link.id}
-                        className={`mh-nav-link ${
-                            activeSection === link.id ? 'active' : ''
-                        }`}
-                        onClick={() => scrollTo(link.id)}
-                    >
-                        {link.icon}
-
-                        <span>{link.label}</span>
-                    </button>
-                ))}
-
-                <div className="mh-divider"></div>
-
-                <button
-                    className="mh-theme-btn"
-                    onClick={() =>
-                        setTheme(theme === 'dark' ? 'light' : 'dark')
-                    }
-                >
-                    {theme === 'dark' ? (
-                        <SunMedium size={16} />
-                    ) : (
-                        <Moon size={16} />
-                    )}
-                </button>
-            </div>
-
+        <div className="navbar-links">
+          {sections.map((section) => (
             <button
-                className="mh-btn-ghost1 mh-time"
-                onClick={() => scrollTo('contact')}
+              key={section.id}
+              className={`navbar-link${activeSection === section.id ? ' active' : ''}`}
+              onClick={() => scrollTo(section.id)}
+              aria-current={activeSection === section.id ? 'true' : undefined}
             >
-                Hire Me
+              {section.icon}
+              <span>{section.label}</span>
             </button>
-        </nav>
-    );
-};
+          ))}
+        </div>
 
-export default Navbar;
+        <div className="navbar-actions">
+          <button
+            className="navbar-theme-btn"
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
+
+          <button className="navbar-cta" onClick={() => scrollTo('contact')}>
+            Contact Me
+            <ArrowUpRight size={13} strokeWidth={2.5} />
+          </button>
+
+          <button
+            className="navbar-mobile-toggle"
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu size={18} />
+          </button>
+        </div>
+      </nav>
+
+      <div className={`navbar-mobile-overlay${mobileOpen ? ' open' : ''}`}>
+        <button
+          className="navbar-mobile-close"
+          onClick={() => setMobileOpen(false)}
+          aria-label="Close menu"
+        >
+          <X size={20} />
+        </button>
+
+        {sections.map((section) => (
+          <button
+            key={section.id}
+            className={`navbar-mobile-link${activeSection === section.id ? ' active' : ''}`}
+            onClick={() => scrollTo(section.id)}
+          >
+            {section.icon}
+            {section.label}
+          </button>
+        ))}
+
+        <button className="navbar-mobile-cta" onClick={() => scrollTo('contact')}>
+          Contact Me
+        </button>
+      </div>
+    </>
+  );
+}

@@ -1,131 +1,83 @@
-import { useEffect, useRef, useState } from 'react';
+import { Briefcase, Building2, Globe } from 'lucide-react';
+import FadeIn from './FadeIn';
+import SectionHeader from './SectionHeader';
 import '../assets/css/Experience.css';
 
 const experiences = [
-    {
-        role: 'Freelance Full Stack Developer',
-        company: 'Self-Employed',
-        meta: 'Jan 2025 – Present · 1 yr 4 mos · Remote',
-        desc: 'Delivering custom web solutions for international clients — from landing pages to full-stack applications. Handling end-to-end development, client communication, and project delivery independently.',
-        badge: 'Freelancing · Active',
-    },
-    {
-        role: 'Full Stack Developer',
-        company: 'Tecno Sphere',
-        meta: '2026 – Present · Pakistan',
-        desc: 'Building scalable ERP systems using React.js, Node.js, Express, and MySQL. Responsible for architecture design, API integration, and performance optimization.',
-    },
-    {
-        role: 'Frontend Developer',
-        company: 'ITS Tech World',
-        meta: '2025 – 2026',
-        desc: 'Developed ERP dashboards using React + Redux. Focused on UI systems, reusable components, and seamless API integration.',
-    },
-    {
-        role: 'Full Stack Developer',
-        company: 'Adroit Light Solutions',
-        meta: '2025',
-        desc: 'Built full-stack applications using React, Laravel, and MySQL with a focus on clean architecture and responsive UI design.',
-    },
+  {
+    role: 'Full Stack Developer',
+    company: 'Softix Technologies',
+    meta: 'May 2026 – Present',
+    desc: 'Working on enterprise software, ERP systems, and government digital projects. Developing frontend interfaces, backend functionality, and database-driven applications for real-world business workflows and operational systems.',
+    techs: ['React', 'Laravel', 'MySQL', 'TypeScript'],
+    current: true,
+    icon: <Briefcase size={16} />,
+  },
+  {
+    role: 'Full Stack Developer',
+    company: 'Tecno Sphere',
+    meta: '2026',
+    desc: 'Built scalable ERP systems using React.js, Node.js, Express, and MySQL. Responsible for architecture design, API integration, and performance optimization.',
+    icon: <Building2 size={16} />,
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'ITS Tech World',
+    meta: '2025 – 2026',
+    desc: 'Developed ERP dashboards using React and Redux. Focused on UI systems, reusable components, and seamless API integration.',
+    icon: <Globe size={16} />,
+  },
+  {
+    role: 'Full Stack Developer',
+    company: 'Adroit Light Solutions',
+    meta: '2025',
+    desc: 'Built full-stack applications using React, Laravel, and MySQL with a focus on clean architecture and responsive UI design.',
+    icon: <Building2 size={16} />,
+  },
+  {
+    role: 'Freelance Full Stack Developer',
+    company: 'Self-Employed',
+    meta: 'Jan 2025 – Present',
+    desc: 'Delivering custom web solutions for international clients — from landing pages to full-stack applications. Handling end-to-end development, client communication, and project delivery.',
+    icon: <Globe size={16} />,
+  },
 ];
 
-const Experience = () => {
-    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const headerRef = useRef<HTMLDivElement>(null);
-    const [visibleCards, setVisibleCards] = useState<boolean[]>(
-        new Array(experiences.length).fill(false),
-    );
-    const [headerVisible, setHeaderVisible] = useState(false);
+export default function Experience() {
+  return (
+    <section id="experience" className="experience">
+      <div className="container">
+        <SectionHeader tag="// selected experience" title="Professional Journey" />
 
-    useEffect(() => {
-        const headerObs = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setHeaderVisible(true);
-                    headerObs.disconnect();
-                }
-            },
-            { threshold: 0.2 },
-        );
-
-        if (headerRef.current){ 
-            headerObs.observe(headerRef.current)
-        }
-
-        
-        const cardObservers = cardRefs.current.map((el, i) => {
-            if (!el){
-                 return null;
-            }
-
-            const obs = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            setVisibleCards((prev) => {
-                                const next = [...prev];
-                                next[i] = true;
-
-                                return next;
-                            });
-                        }, i * 120);
-                        obs.disconnect();
-                    }
-                },
-                { threshold: 0.1 },
-            );
-            obs.observe(el);
-
-            return obs;
-        });
-
-        return () => {
-            headerObs.disconnect();
-            cardObservers.forEach((o) => o?.disconnect());
-        };
-    }, []);
-
-    return (
-        <section id="experience" className="exp-section">
-
-            <div
-                ref={headerRef}
-                className={`exp-header ${headerVisible ? 'exp-header-visible' : ''}`}
-            >
-                <p className="exp-tag">// Selected Experience</p>
-                <div className="exp-glow" />
-                <h2 className="exp-title">Professional Journey</h2>
-            </div>
-
-            <div className="exp-grid">
-                {experiences.map((exp, i) => (
-                    <div
-                        className={`exp-card ${visibleCards[i] ? 'exp-card-visible' : ''}`}
-                        key={i}
-                        ref={(el) => {
-                            cardRefs.current[i] = el;
-                        }}
-                    >
-                        <div className="exp-card-top">
-                            {'badge' in exp && (
-                                <span className="exp-badge">{exp.badge}</span>
-                            )}
-                            <span
-                                className="exp-dot"
-                                style={'badge' in exp ? {} : { marginLeft: 'auto' }}
-                            />
-                        </div>
-
-                        <div className="exp-role">{exp.role}</div>
-                        <div className="exp-company">{exp.company}</div>
-                        <div className="exp-meta">{exp.meta}</div>
-                        <p className="exp-desc">{exp.desc}</p>
+        <div className="exp-timeline">
+          {experiences.map((exp, i) => (
+            <FadeIn key={i} delay={i * 0.08} y={20}>
+              <div className={`exp-card${exp.current ? ' exp-card-current' : ''}`}>
+                <div className="exp-card-icon">{exp.icon}</div>
+                <div className="exp-card-content">
+                  {exp.current && (
+                    <span className="exp-current-badge">
+                      <span className="exp-current-badge-dot" />
+                      Current
+                    </span>
+                  )}
+                  <div className="exp-role">{exp.role}</div>
+                  <div className="exp-company">{exp.company}</div>
+                  <div className="exp-meta">{exp.meta}</div>
+                  <p className="exp-desc">{exp.desc}</p>
+                  {exp.techs && (
+                    <div className="exp-techs">
+                      {exp.techs.map((t) => (
+                        <span key={t} className="exp-tech">{t}</span>
+                      ))}
                     </div>
-                ))}
-            </div>
-
-        </section>
-    );
-};
-
-export default Experience;
+                  )}
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -146,7 +146,7 @@
   border-color: var(--border-hover);
 }
 
-/* Mobile menu overlay */
+/* Mobile overlay - default hidden */
 .navbar-mobile-overlay {
   display: none;
 }
@@ -168,12 +168,14 @@
     display: flex;
   }
 
+  /* Overlay base - hidden by default, visible when .open */
   .navbar-mobile-overlay {
     display: flex;
     position: fixed;
     inset: 0;
     background: rgba(5, 8, 15, 0.6);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 999;
     flex-direction: column;
     align-items: center;
@@ -181,16 +183,40 @@
     gap: 0.5rem;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
   }
 
   [data-theme='light'] .navbar-mobile-overlay {
-    background: rgba(248, 250, 252, 0.85);
+    background: rgba(248, 250, 252, 0.9);
   }
 
   .navbar-mobile-overlay.open {
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
+  }
+
+  .navbar-mobile-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .navbar-mobile-close:hover {
+    border-color: var(--accent);
+    background: var(--accent-glow);
   }
 
   .navbar-mobile-link {
@@ -207,7 +233,7 @@
     border-radius: var(--radius-md);
     transition: color 0.2s ease, background 0.2s ease;
     font-family: var(--font-sans);
-    min-width: 200px;
+    min-width: 220px;
     justify-content: center;
   }
 
@@ -218,8 +244,8 @@
   }
 
   .navbar-mobile-cta {
-    margin-top: 1rem;
-    padding: 0.75rem 2rem;
+    margin-top: 0.75rem;
+    padding: 0.75rem 2.5rem;
     background: var(--accent);
     color: #05080f;
     border: none;
@@ -230,27 +256,11 @@
     text-transform: uppercase;
     cursor: pointer;
     font-family: var(--font-mono);
-    min-width: 200px;
+    min-width: 220px;
     transition: transform 0.2s ease;
   }
 
   .navbar-mobile-cta:hover {
     transform: translateY(-2px);
-  }
-
-  .navbar-mobile-close {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--text);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
   }
 }

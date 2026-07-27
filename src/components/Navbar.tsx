@@ -123,12 +123,14 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
         </div>
       </nav>
 
-      <div className={`navbar-mobile-overlay${mobileOpen ? ' open' : ''}`}>
-        <button
-          className="navbar-mobile-close"
-          onClick={() => setMobileOpen(false)}
-          aria-label="Close menu"
-        >
+      {/* Mobile overlay always rendered, visibility controlled via CSS */}
+      <div
+        className={`navbar-mobile-overlay${mobileOpen ? ' open' : ''}`}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setMobileOpen(false);
+        }}
+      >
+        <button className="navbar-mobile-close" onClick={() => setMobileOpen(false)} aria-label="Close menu">
           <X size={20} />
         </button>
 

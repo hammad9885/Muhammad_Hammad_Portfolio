@@ -80,46 +80,48 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   return (
     <>
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
-        <button className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top">
-          <span className="navbar-logo-dot" />
-          MH
-        </button>
+        <div className="navbar-inner">
+          <button className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top">
+            <span className="navbar-logo-dot" />
+            MH
+          </button>
 
-        <div className="navbar-links">
-          {sections.map((section) => (
+          <div className="navbar-links">
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                className={`navbar-link${activeSection === section.id ? ' active' : ''}`}
+                onClick={() => scrollTo(section.id)}
+                aria-current={activeSection === section.id ? 'true' : undefined}
+              >
+                {section.icon}
+                <span>{section.label}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="navbar-actions">
             <button
-              key={section.id}
-              className={`navbar-link${activeSection === section.id ? ' active' : ''}`}
-              onClick={() => scrollTo(section.id)}
-              aria-current={activeSection === section.id ? 'true' : undefined}
+              className="navbar-theme-btn"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             >
-              {section.icon}
-              <span>{section.label}</span>
+              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
             </button>
-          ))}
-        </div>
 
-        <div className="navbar-actions">
-          <button
-            className="navbar-theme-btn"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-          >
-            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
-          </button>
+            <button className="navbar-cta" onClick={() => scrollTo('contact')}>
+              Contact Me
+              <ArrowUpRight size={13} strokeWidth={2.5} />
+            </button>
 
-          <button className="navbar-cta" onClick={() => scrollTo('contact')}>
-            Contact Me
-            <ArrowUpRight size={13} strokeWidth={2.5} />
-          </button>
-
-          <button
-            className="navbar-mobile-toggle"
-            onClick={() => setMobileOpen(true)}
-            aria-label="Open menu"
-          >
-            <Menu size={18} />
-          </button>
+            <button
+              className="navbar-mobile-toggle"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu size={18} />
+            </button>
+          </div>
         </div>
       </nav>
 

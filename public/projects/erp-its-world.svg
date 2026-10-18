@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="erpBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#040d1a"/>
+      <stop offset="50%" stop-color="#091b33"/>
+      <stop offset="100%" stop-color="#0c2342"/>
+    </linearGradient>
+    <radialGradient id="erpGlow" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyanBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#erpBg)"/>
+  <rect width="800" height="480" fill="url(#erpGlow)"/>
+
+  <!-- Chrome Window -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#061224" stroke="#16315c" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#0a1c38"/>
+  <rect x="40" y="60" width="720" height="12" fill="#0a1c38"/>
+
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#050e1c" stroke="#162e54"/>
+  <text x="400" y="55" fill="#7dd3fc" font-family="monospace" font-size="11" text-anchor="middle">https://erp.itstechworld.com/dashboard</text>
+
+  <!-- Sidebar inside Mockup -->
+  <rect x="60" y="85" width="160" height="345" rx="8" fill="#081830" stroke="#142e54"/>
+  <text x="75" y="115" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="13">🏢 ITS ERP CLOUD</text>
+
+  <rect x="70" y="135" width="140" height="28" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7"/>
+  <text x="85" y="153" fill="#38BDF8" font-family="sans-serif" font-size="11" font-weight="bold">📊 Operations Overview</text>
+  <text x="85" y="188" fill="#94A3B8" font-family="sans-serif" font-size="11">📦 Stock Management</text>
+  <text x="85" y="220" fill="#94A3B8" font-family="sans-serif" font-size="11">💰 Purchase Orders</text>
+  <text x="85" y="252" fill="#94A3B8" font-family="sans-serif" font-size="11">📈 Sales &amp; Invoices</text>
+  <text x="85" y="284" fill="#94A3B8" font-family="sans-serif" font-size="11">👥 User Roles &amp; RBAC</text>
+  <text x="85" y="316" fill="#94A3B8" font-family="sans-serif" font-size="11">📑 Ledger Reports</text>
+
+  <!-- Main Content Dashboard -->
+  <g transform="translate(235, 85)">
+    <!-- 3 Metric Cards -->
+    <rect width="155" height="75" rx="8" fill="#0a1e3d" stroke="#193b6e"/>
+    <text x="15" y="25" fill="#94A3B8" font-family="sans-serif" font-size="10">Active Inventory</text>
+    <text x="15" y="55" fill="#38BDF8" font-family="monospace" font-size="20" font-weight="bold">24,850</text>
+    <text x="110" y="55" fill="#10B981" font-family="monospace" font-size="10">+12%</text>
+
+    <rect x="170" width="155" height="75" rx="8" fill="#0a1e3d" stroke="#193b6e"/>
+    <text x="185" y="25" fill="#94A3B8" font-family="sans-serif" font-size="10">Monthly Revenue</text>
+    <text x="185" y="55" fill="#F8FAFC" font-family="monospace" font-size="20" font-weight="bold">$184.2K</text>
+    <text x="280" y="55" fill="#10B981" font-family="monospace" font-size="10">+8.4%</text>
+
+    <rect x="340" width="165" height="75" rx="8" fill="#0a1e3d" stroke="#193b6e"/>
+    <text x="355" y="25" fill="#94A3B8" font-family="sans-serif" font-size="10">Pending Invoices</text>
+    <text x="355" y="55" fill="#F59E0B" font-family="monospace" font-size="20" font-weight="bold">14</text>
+    <text x="440" y="55" fill="#94A3B8" font-family="monospace" font-size="10">Verified</text>
+
+    <!-- Data Table -->
+    <rect y="90" width="505" height="255" rx="8" fill="#081933" stroke="#15325c"/>
+    <text x="15" y="118" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">Recent Business Transactions (React TSX + Redux)</text>
+    
+    <!-- Table Header -->
+    <rect y="130" width="505" height="28" fill="#0d254c"/>
+    <text x="15" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10" font-weight="bold">ORDER ID</text>
+    <text x="120" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10" font-weight="bold">CLIENT / MODULE</text>
+    <text x="260" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10" font-weight="bold">AMOUNT</text>
+    <text x="380" y="148" fill="#94A3B8" font-family="sans-serif" font-size="10" font-weight="bold">STATUS</text>
+
+    <!-- Row 1 -->
+    <text x="15" y="182" fill="#38BDF8" font-family="monospace" font-size="11">#ERP-9481</text>
+    <text x="120" y="182" fill="#E2E8F0" font-family="sans-serif" font-size="11">Warehouse Stock Dispatch</text>
+    <text x="260" y="182" fill="#F8FAFC" font-family="monospace" font-size="11">$14,250.00</text>
+    <rect x="380" y="168" width="80" height="20" rx="4" fill="#10B981" fill-opacity="0.2"/>
+    <text x="420" y="182" fill="#34D399" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Completed</text>
+
+    <!-- Row 2 -->
+    <text x="15" y="218" fill="#38BDF8" font-family="monospace" font-size="11">#ERP-9482</text>
+    <text x="120" y="218" fill="#E2E8F0" font-family="sans-serif" font-size="11">Supply Chain Restock</text>
+    <text x="260" y="218" fill="#F8FAFC" font-family="monospace" font-size="11">$32,100.00</text>
+    <rect x="380" y="204" width="80" height="20" rx="4" fill="#0284C7" fill-opacity="0.2"/>
+    <text x="420" y="218" fill="#38BDF8" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">In Progress</text>
+
+    <!-- Row 3 -->
+    <text x="15" y="254" fill="#38BDF8" font-family="monospace" font-size="11">#ERP-9483</text>
+    <text x="120" y="254" fill="#E2E8F0" font-family="sans-serif" font-size="11">Vendor Invoice Ledger</text>
+    <text x="260" y="254" fill="#F8FAFC" font-family="monospace" font-size="11">$9,400.00</text>
+    <rect x="380" y="240" width="80" height="20" rx="4" fill="#10B981" fill-opacity="0.2"/>
+    <text x="420" y="254" fill="#34D399" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Completed</text>
+
+    <!-- Row 4 -->
+    <text x="15" y="290" fill="#38BDF8" font-family="monospace" font-size="11">#ERP-9484</text>
+    <text x="120" y="290" fill="#E2E8F0" font-family="sans-serif" font-size="11">Batch Production QC</text>
+    <text x="260" y="290" fill="#F8FAFC" font-family="monospace" font-size="11">$18,650.00</text>
+    <rect x="380" y="276" width="80" height="20" rx="4" fill="#F59E0B" fill-opacity="0.2"/>
+    <text x="420" y="290" fill="#FBBF24" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Pending QC</text>
+  </g>
+</svg>

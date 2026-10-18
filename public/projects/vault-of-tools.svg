@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060913"/>
+      <stop offset="50%" stop-color="#0a1224"/>
+      <stop offset="100%" stop-color="#0d1b36"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#17C0FD" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#17C0FD" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#17C0FD"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15213d" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0d1527" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <rect width="800" height="480" fill="url(#glow)"/>
+
+  <!-- Window Chrome -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#090e1a" stroke="#1f2d4d" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#0f172a"/>
+  <rect x="40" y="60" width="720" height="12" fill="#0f172a"/>
+  
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#070c18" stroke="#1e293b"/>
+  <text x="400" y="55" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">https://vaultoftools.dev</text>
+
+  <!-- Left Sidebar inside Mockup -->
+  <rect x="60" y="90" width="160" height="340" rx="10" fill="url(#cardBg)" stroke="#1e293b"/>
+  <text x="80" y="125" fill="#17C0FD" font-family="sans-serif" font-weight="bold" font-size="14">⚡ Vault of Tools</text>
+  <rect x="75" y="145" width="130" height="28" rx="6" fill="#17C0FD" fill-opacity="0.15" stroke="#17C0FD" stroke-opacity="0.3"/>
+  <text x="88" y="163" fill="#38BDF8" font-family="sans-serif" font-size="11" font-weight="600">JSON Formatter</text>
+  <rect x="75" y="183" width="130" height="28" rx="6" fill="#0b1329"/>
+  <text x="88" y="201" fill="#94A3B8" font-family="sans-serif" font-size="11">Base64 Encoder</text>
+  <rect x="75" y="221" width="130" height="28" rx="6" fill="#0b1329"/>
+  <text x="88" y="239" fill="#94A3B8" font-family="sans-serif" font-size="11">JWT Inspector</text>
+  <rect x="75" y="259" width="130" height="28" rx="6" fill="#0b1329"/>
+  <text x="88" y="277" fill="#94A3B8" font-family="sans-serif" font-size="11">CSS Minifier</text>
+  <rect x="75" y="297" width="130" height="28" rx="6" fill="#0b1329"/>
+  <text x="88" y="315" fill="#94A3B8" font-family="sans-serif" font-size="11">Hash Generator</text>
+  <rect x="75" y="335" width="130" height="28" rx="6" fill="#0b1329"/>
+  <text x="88" y="353" fill="#94A3B8" font-family="sans-serif" font-size="11">Regex Tester</text>
+
+  <!-- Main Content Area: Editor Panel -->
+  <rect x="235" y="90" width="505" height="340" rx="10" fill="url(#cardBg)" stroke="#1e293b"/>
+  
+  <!-- Editor Header -->
+  <rect x="235" y="90" width="505" height="40" rx="10" fill="#0b132b"/>
+  <text x="255" y="115" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">JSON Schema &amp; Validator</text>
+  <rect x="635" y="100" width="90" height="22" rx="4" fill="url(#accent)"/>
+  <text x="680" y="115" fill="#05080f" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">FORMAT ⚡</text>
+
+  <!-- Code Preview Lines -->
+  <text x="255" y="155" fill="#38BDF8" font-family="monospace" font-size="12">1  {</text>
+  <text x="255" y="177" fill="#94A3B8" font-family="monospace" font-size="12">2    <tspan fill="#A78BFA">"platform"</tspan>: <tspan fill="#34D399">"Vault of Tools"</tspan>,</text>
+  <text x="255" y="199" fill="#94A3B8" font-family="monospace" font-size="12">3    <tspan fill="#A78BFA">"architecture"</tspan>: <tspan fill="#34D399">"Next.js 15 &amp; TypeScript"</tspan>,</text>
+  <text x="255" y="221" fill="#94A3B8" font-family="monospace" font-size="12">4    <tspan fill="#A78BFA">"latency"</tspan>: <tspan fill="#F59E0B">"0ms (Client-Side)"</tspan>,</text>
+  <text x="255" y="243" fill="#94A3B8" font-family="monospace" font-size="12">5    <tspan fill="#A78BFA">"database"</tspan>: <tspan fill="#34D399">"MongoDB Atlas"</tspan>,</text>
+  <text x="255" y="265" fill="#94A3B8" font-family="monospace" font-size="12">6    <tspan fill="#A78BFA">"ui_kit"</tspan>: <tspan fill="#34D399">"Radix UI + Tailwind CSS"</tspan>,</text>
+  <text x="255" y="287" fill="#94A3B8" font-family="monospace" font-size="12">7    <tspan fill="#A78BFA">"tools_count"</tspan>: <tspan fill="#F59E0B">28</tspan></text>
+  <text x="255" y="309" fill="#38BDF8" font-family="monospace" font-size="12">8  }</text>
+
+  <!-- Live Output Card at bottom -->
+  <rect x="255" y="335" width="465" height="75" rx="8" fill="#080f20" stroke="#17C0FD" stroke-opacity="0.3"/>
+  <circle cx="275" cy="355" r="4" fill="#10B981"/>
+  <text x="288" y="359" fill="#10B981" font-family="monospace" font-size="11" font-weight="bold">SYNTAX VALIDATED — ZERO ERRORS</text>
+  <text x="275" y="388" fill="#94A3B8" font-family="monospace" font-size="11">Parsed 8 properties • Compressed 42% • Ready to export</text>
+</svg>

@@ -9,63 +9,88 @@ interface TerminalLine {
 }
 
 const initialLines: TerminalLine[] = [
-  { text: 'Welcome to Muhammad Hammad\'s developer terminal.', type: 'output' },
-  { text: 'Type "help" to see available commands.', type: 'output' },
+  { text: 'Welcome to Muhammad Hammad\'s interactive developer terminal.', type: 'output' },
+  { text: 'Type "help" to see available commands or click shortcuts below.', type: 'output' },
   { text: '', type: 'output' },
 ];
 
 const commands: Record<string, string[]> = {
   help: [
     '<span class="dim">Available commands:</span>',
-    '  <span class="accent">whoami</span>    — About me',
-    '  <span class="accent">skills</span>    — My technology stack',
-    '  <span class="accent">projects</span>  — Featured projects',
-    '  <span class="accent">experience</span> — Professional journey',
-    '  <span class="accent">contact</span>   — Get in touch',
-    '  <span class="accent">clear</span>     — Clear terminal',
-    '  <span class="accent">help</span>      — Show this message',
+    '  <span class="accent">whoami</span>     — About Muhammad Hammad & current focus',
+    '  <span class="accent">skills</span>     — Full frontend, backend & enterprise stack',
+    '  <span class="accent">projects</span>   — Featured projects, Vault of Tools, POS & Web apps',
+    '  <span class="accent">experience</span> — Professional journey & employment history',
+    '  <span class="accent">education</span>  — Academic qualifications & degrees',
+    '  <span class="accent">contact</span>    — Phone, email, socials & location',
+    '  <span class="accent">cv</span>         — Resume details & download',
+    '  <span class="accent">clear</span>      — Clear terminal output',
   ],
   whoami: [
     '<span class="green">Muhammad Hammad</span>',
-    'Full Stack Developer at <span class="accent">Softix Technologies</span>',
+    'Frontend Developer &amp; Full Stack Engineer',
+    'Currently at <span class="accent">Softix Technologies</span>',
     '',
-    'Building enterprise software, ERP systems, and',
-    'government digital solutions since 2025.',
+    'Specializing in React.js, Next.js, TypeScript, Laravel, and ERP/POS systems.',
+    'Pursuing Bachelor in Business &amp; Information Technology (BBIT) at Virtual University.',
     '',
-    'Based in Gujranwala, Punjab, Pakistan.',
+    'Location: Qila Sunder Singh Awan Chowk, Gujranwala, Pakistan',
   ],
   skills: [
-    '<span class="yellow">Frontend:</span> React, TypeScript, Next.js, Tailwind CSS',
-    '<span class="yellow">Backend:</span>  Node.js, Express.js, PHP, Laravel',
-    '<span class="yellow">Database:</span> MySQL, MongoDB, Mongoose, Eloquent ORM',
-    '<span class="yellow">Enterprise:</span> ERP Systems, Business Workflows',
-    '<span class="yellow">Tools:</span>     Git, GitHub, Vercel, Postman',
+    '<span class="yellow">Frontend:</span>    React.js, Next.js, JavaScript, TypeScript, Redux, Tailwind CSS, Bootstrap, HTML5/CSS3',
+    '<span class="yellow">Backend:</span>     Laravel (PHP), Node.js, Express.js, REST APIs, Eloquent ORM',
+    '<span class="yellow">Enterprise:</span>  ERP Systems, Point of Sale (POS), Stock Management, Billing &amp; Invoices, RBAC',
+    '<span class="yellow">Database:</span>    MySQL, MongoDB, Relational Schema Design, Query Optimization',
+    '<span class="yellow">DevOps:</span>      Git, GitHub, Vercel, cPanel, Production Deployment',
+    '<span class="yellow">Tools:</span>       VS Code, Postman, Figma, Jira, Chrome DevTools',
   ],
   projects: [
-    '<span class="accent">Featured Projects:</span>',
-    '  <span class="green">01.</span> Mood Analytica — Corporate website (Next.js, CodeIgniter)',
-    '  <span class="green">02.</span> Techizh Solutions — IT services website (Next.js, CodeIgniter)',
-    '  <span class="green">03.</span> ERP System — Business management (React, Laravel)',
-    '  <span class="green">04.</span> Pick My Booking — Flight booking (React, TypeScript)',
-    '  <span class="green">05.</span> Furniture Store — E-commerce (Next.js, TypeScript)',
+    '<span class="accent">Featured Projects &amp; Products:</span>',
+    '  <span class="green">01.</span> Vault of Tools       — Developer utilities platform (Next.js, TypeScript, MongoDB)',
+    '  <span class="green">02.</span> Mehar Sweets POS     — Point of Sale &amp; stock ERP system (Laravel, PHP, MySQL)',
+    '  <span class="green">03.</span> Techizh Solutions   — IT services web app (Next.js, React, MySQL) [techizh.com]',
+    '  <span class="green">04.</span> Moods Analytica     — Corporate networking platform (Next.js, React) [moodsanalytica.com]',
+    '  <span class="green">05.</span> Modern E-Commerce   — Online shopping platform (Next.js, TypeScript, Redux)',
+    '  <span class="green">06.</span> ERP System (ITS)    — Enterprise Resource Planning dashboard (React TSX, Redux)',
+    '  <span class="green">07.</span> Archilux Studio     — Modern luxury architecture platform (Next.js, TypeScript)',
+    '  <span class="green">08.</span> Site-Wander         — Travel discovery &amp; itinerary explorer (React, Tailwind)',
+    '  <span class="green">09.</span> ElectionApp         — Digital voting &amp; real-time tallying (Node.js, Express)',
+    '  <span class="green">10.</span> Pick My Booking     — Flight booking platform (React, TypeScript) [pickmybooking.com]',
+    '  <span class="green">11.</span> Furniture Store     — E-commerce store with modern UI (Next.js, Tailwind CSS)',
+    '  <span class="green">12.</span> NCCIA Operations    — Public sector cybercrime portal (Full Stack, Database)',
     '',
     'Type "help" for more commands.',
   ],
   experience: [
     '<span class="accent">Professional Journey:</span>',
     '',
-    '  <span class="green">2026 — Present</span>  Full Stack Developer @ Softix Technologies',
+    '  <span class="green">May 2026 — Present</span>  Full Stack Developer @ Softix Technologies (Current)',
     '  <span class="green">2026</span>             Full Stack Developer @ Tecno Sphere',
-    '  <span class="green">2025 — 2026</span>     Frontend Developer @ ITS Tech World',
-    '  <span class="green">2025</span>             Full Stack Developer @ Adroit Light Solutions',
-    '  <span class="green">2025 — Present</span>  Freelance Full Stack Developer',
+    '  <span class="green">12/2025 — Present</span> Frontend Developer (ERP Modules) @ ITS Tech World',
+    '  <span class="green">04/2025 — 12/2025</span> Frontend Developer @ Adroit Light Solutions',
+    '  <span class="green">Jan 2025 — Present</span> Freelance Full Stack Developer (Self-Employed)',
+  ],
+  education: [
+    '<span class="accent">Academic Qualifications:</span>',
+    '',
+    '  <span class="green">Virtual University</span> — BBIT (Bachelor in Business &amp; IT) [In Progress]',
+    '  <span class="green">Apex College Gujranwala</span> — I.C.S (Intermediate in Computer Science) [2024]',
+    '  <span class="green">Govt. A.D Model School</span> — Matriculation in Science [2022]',
   ],
   contact: [
-    '<span class="accent">Get in touch:</span>',
+    '<span class="accent">Get In Touch:</span>',
     '',
-    '  <span class="dim">Email:</span>    mrhammadghg@gmail.com',
-    '  <span class="dim">GitHub:</span>   github.com/hammad9885',
-    '  <span class="dim">LinkedIn:</span> linkedin.com/in/muhammad-hammad-dev',
+    '  <span class="dim">Phone / WhatsApp:</span> +92 347 6789885 (03476789885)',
+    '  <span class="dim">Email:</span>            mrhammadghg@gmail.com',
+    '  <span class="dim">GitHub:</span>           https://github.com/hammad9885',
+    '  <span class="dim">LinkedIn:</span>         https://www.linkedin.com/in/muhammad-hammad-dev/',
+    '  <span class="dim">Location:</span>         Gujranwala, Punjab, Pakistan',
+  ],
+  cv: [
+    '<span class="green">Resume / CV:</span>',
+    'Muhammad Hammad &mdash; Frontend &amp; Full Stack Developer Resume',
+    'File: Muhammad_Hammad_Resume.pdf',
+    'You can click the "Download CV" button in the Hero or Contact section.',
   ],
   clear: [],
 };
@@ -135,7 +160,7 @@ export default function TerminalSection() {
               <span className="terminal-dot" />
               <span className="terminal-dot" />
               <span className="terminal-dot" />
-              <span className="terminal-title">portfolio@terminal ~ $</span>
+              <span className="terminal-title">hammad@portfolio ~ $</span>
             </div>
 
             <div className="terminal-body" ref={bodyRef} role="log" aria-label="Terminal output">
@@ -155,7 +180,7 @@ export default function TerminalSection() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Type a command..."
+                  placeholder="Type a command (help, projects, education, skills, whoami)..."
                   aria-label="Terminal command input"
                   autoComplete="off"
                   spellCheck={false}

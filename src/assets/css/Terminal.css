@@ -1,5 +1,9 @@
 .terminal-section {
-  padding: var(--section-spacing) 2rem;
+  padding: var(--section-spacing) 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .terminal-wrapper {
@@ -9,6 +13,8 @@
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   font-family: var(--font-mono);
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 [data-theme='light'] .terminal-wrapper {
@@ -23,12 +29,14 @@
   padding: 0.75rem 1.25rem;
   background: rgba(255, 255, 255, 0.03);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
 }
 
 .terminal-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .terminal-dot:nth-child(1) { background: #ff5f56; }
@@ -40,6 +48,7 @@
   font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.3);
   letter-spacing: 0.5px;
+  word-break: break-all;
 }
 
 .terminal-body {
@@ -47,6 +56,7 @@
   min-height: 280px;
   max-height: 400px;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .terminal-body::-webkit-scrollbar {
@@ -68,6 +78,7 @@
   color: rgba(255, 255, 255, 0.7);
   white-space: pre-wrap;
   word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .terminal-line.prompt {
@@ -125,7 +136,7 @@
 .terminal-help {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1rem;
+  gap: 0.4rem 0.85rem;
   margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -133,9 +144,10 @@
 
 .terminal-help-item {
   font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.35);
   cursor: pointer;
   transition: color 0.2s ease;
+  word-break: break-word;
 }
 
 .terminal-help-item:hover {
@@ -148,10 +160,6 @@
 }
 
 @media (max-width: 768px) {
-  .terminal-section {
-    padding: var(--section-spacing) 1.25rem;
-  }
-
   .terminal-body {
     padding: 1rem;
     min-height: 240px;

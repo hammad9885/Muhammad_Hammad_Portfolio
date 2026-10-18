@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="posBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05120d"/>
+      <stop offset="50%" stop-color="#0a2119"/>
+      <stop offset="100%" stop-color="#081812"/>
+    </linearGradient>
+    <radialGradient id="posGlow" cx="20%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="emeraldGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#posBg)"/>
+  <rect width="800" height="480" fill="url(#posGlow)"/>
+
+  <!-- Chrome Window -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#06120e" stroke="#133d2e" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#0d241c"/>
+  <rect x="40" y="60" width="720" height="12" fill="#0d241c"/>
+
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#06120e" stroke="#133d2e"/>
+  <text x="400" y="55" fill="#6ee7b7" font-family="monospace" font-size="11" text-anchor="middle">https://meharsweets.erp/pos</text>
+
+  <!-- POS Top Bar -->
+  <rect x="60" y="85" width="680" height="48" rx="8" fill="#0b241a" stroke="#144633"/>
+  <text x="80" y="114" fill="#34D399" font-family="sans-serif" font-weight="800" font-size="15">🧁 MEHAR SWEETS &amp; BAKERS POS</text>
+  <rect x="580" y="96" width="145" height="26" rx="6" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-opacity="0.4"/>
+  <text x="652" y="113" fill="#6EE7B7" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">REGISTER #01 • OPEN</text>
+
+  <!-- Left Side: POS Item Grid -->
+  <rect x="60" y="145" width="430" height="285" rx="8" fill="#081813" stroke="#123a2b"/>
+  <text x="80" y="172" fill="#94A3B8" font-family="sans-serif" font-size="12" font-weight="600">FAVORITE ITEMS / FAST LOOKUP</text>
+
+  <!-- Product Tiles -->
+  <g transform="translate(80, 185)">
+    <!-- Tile 1 -->
+    <rect width="115" height="68" rx="6" fill="#0e2a1f" stroke="#1c4d39"/>
+    <text x="12" y="24" fill="#F8FAFC" font-family="sans-serif" font-size="11" font-weight="bold">Gulab Jamun</text>
+    <text x="12" y="42" fill="#34D399" font-family="monospace" font-size="11">Rs. 950 / kg</text>
+    <text x="12" y="58" fill="#94A3B8" font-family="sans-serif" font-size="9">SKU: SW-01</text>
+
+    <!-- Tile 2 -->
+    <rect x="130" width="115" height="68" rx="6" fill="#0e2a1f" stroke="#1c4d39"/>
+    <text x="142" y="24" fill="#F8FAFC" font-family="sans-serif" font-size="11" font-weight="bold">Rasgulla</text>
+    <text x="142" y="42" fill="#34D399" font-family="monospace" font-size="11">Rs. 1,050 / kg</text>
+    <text x="142" y="58" fill="#94A3B8" font-family="sans-serif" font-size="9">SKU: SW-02</text>
+
+    <!-- Tile 3 -->
+    <rect x="260" width="115" height="68" rx="6" fill="#0e2a1f" stroke="#1c4d39"/>
+    <text x="272" y="24" fill="#F8FAFC" font-family="sans-serif" font-size="11" font-weight="bold">Barfi Mix</text>
+    <text x="272" y="42" fill="#34D399" font-family="monospace" font-size="11">Rs. 1,200 / kg</text>
+    <text x="272" y="58" fill="#94A3B8" font-family="sans-serif" font-size="9">SKU: SW-03</text>
+
+    <!-- Tile 4 -->
+    <rect y="80" width="115" height="68" rx="6" fill="#0e2a1f" stroke="#1c4d39"/>
+    <text x="12" y="104" fill="#F8FAFC" font-family="sans-serif" font-size="11" font-weight="bold">Special Halwa</text>
+    <text x="12" y="122" fill="#34D399" font-family="monospace" font-size="11">Rs. 850 / box</text>
+    <text x="12" y="138" fill="#94A3B8" font-family="sans-serif" font-size="9">SKU: SW-04</text>
+
+    <!-- Tile 5 -->
+    <rect x="130" y="80" width="115" height="68" rx="6" fill="#0e2a1f" stroke="#1c4d39"/>
+    <text x="142" y="104" fill="#F8FAFC" font-family="sans-serif" font-size="11" font-weight="bold">Bakery Biscuits</text>
+    <text x="142" y="122" fill="#34D399" font-family="monospace" font-size="11">Rs. 600 / pack</text>
+    <text x="142" y="138" fill="#94A3B8" font-family="sans-serif" font-size="9">SKU: BK-01</text>
+
+    <!-- Tile 6 -->
+    <rect x="260" y="80" width="115" height="68" rx="6" fill="#0e2a1f" stroke="#1c4d39"/>
+    <text x="272" y="104" fill="#F8FAFC" font-family="sans-serif" font-size="11" font-weight="bold">Fresh Cake 2lb</text>
+    <text x="272" y="122" fill="#34D399" font-family="monospace" font-size="11">Rs. 1,400</text>
+    <text x="272" y="138" fill="#94A3B8" font-family="sans-serif" font-size="9">SKU: BK-02</text>
+  </g>
+
+  <!-- Barcode Scan Simulator -->
+  <rect x="80" y="360" width="390" height="48" rx="6" fill="#040b08" stroke="#10B981" stroke-dasharray="4 4"/>
+  <text x="100" y="388" fill="#34D399" font-family="monospace" font-size="12">READY TO SCAN BARCODE / ENTER SKU [ ||||||||||| ]</text>
+
+  <!-- Right Side: Invoice & Cart -->
+  <rect x="505" y="145" width="235" height="285" rx="8" fill="#081813" stroke="#123a2b"/>
+  <text x="525" y="172" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">CURRENT INVOICE #8942</text>
+  <line x1="525" y1="184" x2="720" y2="184" stroke="#1c4d39" stroke-width="1"/>
+
+  <text x="525" y="206" fill="#E2E8F0" font-family="sans-serif" font-size="11">2x Gulab Jamun (1kg)</text>
+  <text x="720" y="206" fill="#34D399" font-family="monospace" font-size="11" text-anchor="end">Rs. 1,900</text>
+
+  <text x="525" y="228" fill="#E2E8F0" font-family="sans-serif" font-size="11">1x Fresh Cake (2lb)</text>
+  <text x="720" y="228" fill="#34D399" font-family="monospace" font-size="11" text-anchor="end">Rs. 1,400</text>
+
+  <line x1="525" y1="250" x2="720" y2="250" stroke="#1c4d39" stroke-width="1"/>
+  <text x="525" y="275" fill="#94A3B8" font-family="sans-serif" font-size="11">Subtotal:</text>
+  <text x="720" y="275" fill="#E2E8F0" font-family="monospace" font-size="11" text-anchor="end">Rs. 3,300</text>
+  
+  <text x="525" y="295" fill="#94A3B8" font-family="sans-serif" font-size="11">GST (5%):</text>
+  <text x="720" y="295" fill="#E2E8F0" font-family="monospace" font-size="11" text-anchor="end">Rs. 165</text>
+
+  <!-- Total Banner -->
+  <rect x="520" y="315" width="205" height="42" rx="6" fill="#10B981" fill-opacity="0.15" stroke="#10B981"/>
+  <text x="532" y="340" fill="#34D399" font-family="sans-serif" font-size="12" font-weight="bold">TOTAL DUE:</text>
+  <text x="715" y="341" fill="#10B981" font-family="monospace" font-size="14" font-weight="bold" text-anchor="end">Rs. 3,465</text>
+
+  <!-- Checkout Button -->
+  <rect x="520" y="370" width="205" height="44" rx="8" fill="url(#emeraldGold)"/>
+  <text x="622" y="396" fill="#041208" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PRINT INVOICE &amp; PAY ⚡</text>
+</svg>

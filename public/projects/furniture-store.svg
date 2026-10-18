@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="furnBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#120e09"/>
+      <stop offset="50%" stop-color="#241a10"/>
+      <stop offset="100%" stop-color="#332414"/>
+    </linearGradient>
+    <radialGradient id="furnGlow" cx="20%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#EAB308" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EAB308" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="woodGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#FACC15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#furnBg)"/>
+  <rect width="800" height="480" fill="url(#furnGlow)"/>
+
+  <!-- Chrome Window -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#140f09" stroke="#382916" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#21190e"/>
+  <rect x="40" y="60" width="720" height="12" fill="#21190e"/>
+
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#120c06" stroke="#302211"/>
+  <text x="400" y="55" fill="#fef08a" font-family="monospace" font-size="11" text-anchor="middle">https://furniture-interior.shop</text>
+
+  <!-- Navbar -->
+  <rect x="60" y="85" width="680" height="46" rx="8" fill="#1f160c" stroke="#3b2b16"/>
+  <text x="80" y="113" fill="#FACC15" font-family="sans-serif" font-weight="900" font-size="16">🪑 NORDIC LIVING STORE</text>
+  <text x="440" y="112" fill="#94A3B8" font-family="sans-serif" font-size="11">Living Room</text>
+  <text x="530" y="112" fill="#94A3B8" font-family="sans-serif" font-size="11">Bedroom</text>
+  <rect x="625" y="95" width="100" height="26" rx="5" fill="url(#woodGold)"/>
+  <text x="675" y="112" fill="#1a1205" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Catalog (48)</text>
+
+  <!-- Featured Furniture Item Left -->
+  <rect x="60" y="145" width="380" height="280" rx="10" fill="#1a1209" stroke="#3b2b16"/>
+  
+  <!-- Chair / Sofa Graphic Shape -->
+  <rect x="85" y="165" width="330" height="140" rx="8" fill="#2d2010"/>
+  <rect x="135" y="210" width="230" height="50" rx="10" fill="#CA8A04"/>
+  <rect x="155" y="190" width="190" height="40" rx="8" fill="#A16207"/>
+  <text x="250" y="240" fill="#170f03" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">NORDIC MINIMAL SOFA</text>
+
+  <text x="85" y="335" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="bold">Scandinavian 3-Seater Oak Couch</text>
+  <text x="85" y="355" fill="#94A3B8" font-family="sans-serif" font-size="10">Solid walnut legs, stain-resistant linen fabric</text>
+  <text x="85" y="388" fill="#FACC15" font-family="monospace" font-size="18" font-weight="bold">$749.00</text>
+  <rect x="275" y="365" width="140" height="34" rx="6" fill="url(#woodGold)"/>
+  <text x="345" y="387" fill="#1a1205" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Quick Purchase ➔</text>
+
+  <!-- 2 Smaller Items Right -->
+  <g transform="translate(460, 145)">
+    <rect width="280" height="130" rx="10" fill="#1a1209" stroke="#3b2b16"/>
+    <rect x="15" y="15" width="90" height="100" rx="6" fill="#291c0e"/>
+    <circle cx="60" cy="65" r="28" fill="#CA8A04" fill-opacity="0.3"/>
+    <text x="120" y="42" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">Ergonomic Lounge Chair</text>
+    <text x="120" y="62" fill="#94A3B8" font-family="sans-serif" font-size="10">Curved bentwood armrests</text>
+    <text x="120" y="92" fill="#FACC15" font-family="monospace" font-size="14" font-weight="bold">$329.00</text>
+    <rect x="120" y="100" width="85" height="18" rx="4" fill="#3b2b16"/>
+    <text x="162" y="113" fill="#FACC15" font-family="sans-serif" font-size="9" text-anchor="middle">In Stock</text>
+
+    <rect y="145" width="280" height="135" rx="10" fill="#1a1209" stroke="#3b2b16"/>
+    <rect x="15" y="160" width="90" height="105" rx="6" fill="#291c0e"/>
+    <rect x="35" y="185" width="50" height="55" rx="4" fill="#A16207"/>
+    <text x="120" y="187" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">Minimal Coffee Table</text>
+    <text x="120" y="207" fill="#94A3B8" font-family="sans-serif" font-size="10">Tempered glass &amp; teak finish</text>
+    <text x="120" y="237" fill="#FACC15" font-family="monospace" font-size="14" font-weight="bold">$189.00</text>
+    <rect x="120" y="245" width="85" height="18" rx="4" fill="#3b2b16"/>
+    <text x="162" y="258" fill="#FACC15" font-family="sans-serif" font-size="9" text-anchor="middle">In Stock</text>
+  </g>
+</svg>

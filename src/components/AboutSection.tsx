@@ -7,6 +7,10 @@ import {
   Briefcase,
   Globe,
   CircleCheck,
+  GraduationCap,
+  Phone,
+  ShoppingCart,
+  Wrench,
 } from 'lucide-react';
 import FadeIn from './FadeIn';
 import SectionHeader from './SectionHeader';
@@ -14,24 +18,34 @@ import '../assets/css/About.css';
 
 const capabilities = [
   {
-    icon: <Code2 size={16} />,
-    title: 'Full Stack Development',
-    desc: 'Building end-to-end applications with modern frontend and backend technologies.',
+    icon: <Code2 size={18} />,
+    title: 'Frontend & Full Stack Engineering',
+    desc: 'Building responsive, scalable web applications with React.js, Next.js, TypeScript, Tailwind CSS, and REST APIs.',
   },
   {
-    icon: <Building2 size={16} />,
-    title: 'Enterprise Software',
-    desc: 'Developing scalable enterprise applications with complex business logic.',
+    icon: <Database size={18} />,
+    title: 'ERP & Business Systems',
+    desc: 'Developing modular ERP platforms for real-time inventory tracking, sales automation, and accounting ledgers.',
   },
   {
-    icon: <Database size={16} />,
-    title: 'ERP Systems',
-    desc: 'Implementing business management systems for operations and workflows.',
+    icon: <ShoppingCart size={18} />,
+    title: 'POS & E-Commerce Solutions',
+    desc: 'Engineering Point of Sale checkout systems and feature-rich online shopping stores with cart & order flows.',
   },
   {
-    icon: <Shield size={16} />,
-    title: 'Government Digital Projects',
-    desc: 'Contributing to digital systems supporting public sector operations.',
+    icon: <Shield size={18} />,
+    title: 'Enterprise & Government Projects',
+    desc: 'Contributing to secure digital software solutions including Pakistan NCCIA digital operational workflows.',
+  },
+  {
+    icon: <Building2 size={18} />,
+    title: 'Backend & Database Architecture',
+    desc: 'Developing high-performance REST APIs and database-driven solutions using Laravel, Node.js, and MySQL.',
+  },
+  {
+    icon: <Wrench size={18} />,
+    title: 'Developer Productivity Tools',
+    desc: 'Authoring developer utility toolkits (Vault of Tools) with zero-latency client-side processing.',
   },
 ];
 
@@ -39,24 +53,30 @@ export default function AboutSection() {
   return (
     <section id="about" className="about">
       <div className="container">
-        <SectionHeader tag="// about me" title="What I Do." />
+        <SectionHeader tag="// about me" title="Engineering Quality Software." />
 
         <div className="about-grid">
           <FadeIn>
             <div className="about-text">
               <p>
-                I'm a <strong>Full Stack Developer</strong> currently at <strong>Softix Technologies</strong>,
-                where I build real-world enterprise software, ERP systems, and government digital solutions.
+                I am a passionate <strong>Frontend Developer</strong> and <strong>Full Stack Engineer</strong> based
+                in Gujranwala, Pakistan. I specialize in building responsive, scalable, and high-performance
+                web applications using <strong>React.js</strong>, <strong>Next.js</strong>, and modern JavaScript / TypeScript.
               </p>
               <p>
-                My work spans the full stack — from frontend interfaces to backend APIs, database architecture,
-                and complex business workflows. I focus on building maintainable, scalable systems that solve
-                actual business problems.
+                My expertise covers modern frontend architecture with <strong>Tailwind CSS</strong>, <strong>Bootstrap</strong>,
+                and <strong>Redux Toolkit</strong>, paired with strong backend capabilities in <strong>Laravel</strong>, <strong>Node.js</strong>,
+                and <strong>MySQL</strong>. I design and integrate robust REST APIs and write clean, maintainable code following industry best practices.
               </p>
               <p>
-                I have contributed to a <strong>government digital project</strong> for the National Cyber Crime
-                Investigation Agency (NCCIA), Pakistan, and worked on multiple <strong>ERP systems</strong> handling
-                inventory, sales, purchases, reporting, and business process automation.
+                Throughout my career, I have contributed to enterprise software at <strong>Softix Technologies</strong>,
+                ERP software development at <strong>ITS Tech World</strong> and <strong>Tecno Sphere</strong>, responsive UI systems at <strong>Adroit Light Solutions</strong>,
+                and delivered commercial retail solutions including <strong>Mehar Sweets POS &amp; ERP</strong>, developer tools like <strong>Vault of Tools</strong>,
+                and public sector digital workflows for <strong>NCCIA</strong> (National Cyber Crime Investigation Agency, Pakistan).
+              </p>
+              <p>
+                Currently pursuing my <strong>Bachelor in Business &amp; Information Technology (BBIT)</strong> at Virtual University of Pakistan,
+                I blend technical coding excellence with deep business domain understanding.
               </p>
             </div>
           </FadeIn>
@@ -77,31 +97,45 @@ export default function AboutSection() {
             <FadeIn delay={0.2}>
               <div className="about-info-card">
                 <div className="about-info-item">
-                  <div className="about-info-icon"><MapPin size={15} /></div>
+                  <div className="about-info-icon"><MapPin size={16} /></div>
                   <div>
                     <div className="about-info-label">Location</div>
-                    <div className="about-info-value">Gujranwala, Punjab, Pakistan</div>
+                    <div className="about-info-value">Qila Sunder Singh Awan Chowk, Gujranwala, Pakistan</div>
                   </div>
                 </div>
                 <div className="about-info-item">
-                  <div className="about-info-icon"><Briefcase size={15} /></div>
+                  <div className="about-info-icon"><Phone size={16} /></div>
+                  <div>
+                    <div className="about-info-label">Phone / WhatsApp</div>
+                    <div className="about-info-value">+92 347 6789885 (03476789885)</div>
+                  </div>
+                </div>
+                <div className="about-info-item">
+                  <div className="about-info-icon"><GraduationCap size={16} /></div>
+                  <div>
+                    <div className="about-info-label">Degree &amp; Studies</div>
+                    <div className="about-info-value">BBIT (In Progress) &mdash; Virtual University</div>
+                  </div>
+                </div>
+                <div className="about-info-item">
+                  <div className="about-info-icon"><Briefcase size={16} /></div>
                   <div>
                     <div className="about-info-label">Current Role</div>
-                    <div className="about-info-value">Full Stack Developer at Softix Technologies</div>
+                    <div className="about-info-value">Full Stack Developer @ Softix Technologies</div>
                   </div>
                 </div>
                 <div className="about-info-item">
-                  <div className="about-info-icon"><Globe size={15} /></div>
+                  <div className="about-info-icon"><Globe size={16} /></div>
                   <div>
                     <div className="about-info-label">Languages</div>
-                    <div className="about-info-value">Urdu, English</div>
+                    <div className="about-info-value">Urdu (Fluent), English (Professional Working)</div>
                   </div>
                 </div>
                 <div className="about-info-item">
-                  <div className="about-info-icon"><CircleCheck size={15} style={{ color: 'var(--accent)' }} /></div>
+                  <div className="about-info-icon"><CircleCheck size={16} style={{ color: 'var(--accent)' }} /></div>
                   <div>
                     <div className="about-info-label">Status</div>
-                    <div className="about-info-value" style={{ color: 'var(--accent)' }}>Open to Work</div>
+                    <div className="about-info-value" style={{ color: 'var(--accent)' }}>Open to High-Impact Opportunities &amp; Freelance Projects</div>
                   </div>
                 </div>
               </div>

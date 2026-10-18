@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="archBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0e0c"/>
+      <stop offset="50%" stop-color="#1c1914"/>
+      <stop offset="100%" stop-color="#2b261e"/>
+    </linearGradient>
+    <radialGradient id="archGlow" cx="70%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bronzeGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#archBg)"/>
+  <rect width="800" height="480" fill="url(#archGlow)"/>
+
+  <!-- Chrome Window -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#14120e" stroke="#383022" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#1f1b14"/>
+  <rect x="40" y="60" width="720" height="12" fill="#1f1b14"/>
+
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#100e0a" stroke="#2e271c"/>
+  <text x="400" y="55" fill="#fde68a" font-family="monospace" font-size="11" text-anchor="middle">https://archilux-design.studio</text>
+
+  <!-- Navbar -->
+  <rect x="60" y="85" width="680" height="46" rx="8" fill="#1b1710" stroke="#383020"/>
+  <text x="80" y="113" fill="#FBBF24" font-family="sans-serif" font-weight="900" font-size="16">🏛️ ARCHILUX STUDIO</text>
+  <text x="420" y="112" fill="#A8A29E" font-family="sans-serif" font-size="11">Residential</text>
+  <text x="510" y="112" fill="#A8A29E" font-family="sans-serif" font-size="11">Commercial</text>
+  <text x="600" y="112" fill="#A8A29E" font-family="sans-serif" font-size="11">Monographs</text>
+
+  <!-- Hero Content inside Mockup -->
+  <rect x="60" y="145" width="390" height="280" rx="10" fill="#17140e" stroke="#332a1b"/>
+  <rect x="80" y="170" width="160" height="24" rx="12" fill="#78350f" fill-opacity="0.3" stroke="#d97706"/>
+  <text x="160" y="186" fill="#FCD34D" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">MODERN ARCHITECTURE</text>
+
+  <text x="80" y="225" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="22">Sculpting Space.</text>
+  <text x="80" y="255" fill="#FBBF24" font-family="sans-serif" font-weight="900" font-size="22">Defining Luxury.</text>
+  <text x="80" y="285" fill="#A8A29E" font-family="sans-serif" font-size="12">Next-generation architectural portfolio showcasing spatial geometry, sustainable materials, and minimalist interior design.</text>
+
+  <rect x="80" y="325" width="145" height="38" rx="8" fill="url(#bronzeGold)"/>
+  <text x="152" y="348" fill="#1c1305" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">View Projects ➔</text>
+
+  <!-- Right Side: Architectural Visual Cards -->
+  <g transform="translate(470, 145)">
+    <rect width="270" height="130" rx="10" fill="#1d1912" stroke="#382e1d"/>
+    <polygon points="10,120 70,30 130,120" fill="#d97706" fill-opacity="0.25"/>
+    <polygon points="90,120 160,20 230,120" fill="#f59e0b" fill-opacity="0.35"/>
+    <text x="20" y="40" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">The Obsidian Villa</text>
+    <text x="20" y="60" fill="#FBBF24" font-family="monospace" font-size="10">Geneva, Switzerland • 2025</text>
+
+    <rect y="145" width="270" height="135" rx="10" fill="#1d1912" stroke="#382e1d"/>
+    <rect x="15" y="160" width="70" height="85" rx="4" fill="#2d2518"/>
+    <rect x="95" y="160" width="70" height="85" rx="4" fill="#2d2518"/>
+    <rect x="175" y="160" width="70" height="85" rx="4" fill="#2d2518"/>
+    <text x="20" y="175" fill="#FDE68A" font-family="sans-serif" font-size="11" font-weight="bold">Glass Pavilion</text>
+    <text x="20" y="195" fill="#A8A29E" font-family="sans-serif" font-size="9">Minimalist concrete frame</text>
+  </g>
+</svg>

@@ -1,18 +1,21 @@
 .section-header {
   padding-top: 2rem;
   border-top: 1px solid var(--border);
-  margin-bottom: 3rem;
+  margin-bottom: 2.75rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-tag {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--accent);
-  letter-spacing: 3.5px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   opacity: 0.9;
   display: block;
   margin-bottom: 0.75rem;
+  word-break: break-word;
 }
 
 .section-line {
@@ -25,11 +28,13 @@
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -0.5px;
   color: var(--text);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Scroll progress */
@@ -48,4 +53,21 @@
   background: var(--accent-gradient);
   transition: width 0.1s linear;
   box-shadow: 0 0 12px var(--accent-glow);
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    border-top: none;
+    padding-top: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-tag {
+    letter-spacing: 1.8px;
+    font-size: 0.6rem;
+  }
+
+  .scroll-progress {
+    display: none !important;
+  }
 }

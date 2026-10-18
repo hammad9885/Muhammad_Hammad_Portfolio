@@ -6,6 +6,7 @@ import {
   Menu,
   X,
   User,
+  GraduationCap,
   Code2,
   FolderKanban,
   Briefcase,
@@ -21,13 +22,14 @@ interface NavbarProps {
 }
 
 const sections = [
-  { id: 'about', label: 'About', icon: <User size={15} /> },
-  { id: 'skills', label: 'Skills', icon: <Code2 size={15} /> },
-  { id: 'experience', label: 'Experience', icon: <Briefcase size={15} /> },
-  { id: 'projects', label: 'Projects', icon: <FolderKanban size={15} /> },
-  { id: 'enterprise', label: 'Enterprise', icon: <Building2 size={15} /> },
-  { id: 'terminal', label: 'Terminal', icon: <Terminal size={15} /> },
-  { id: 'contact', label: 'Contact', icon: <Mail size={15} /> },
+  { id: 'about', label: 'About', icon: <User size={14} /> },
+  { id: 'education', label: 'Education', icon: <GraduationCap size={14} /> },
+  { id: 'skills', label: 'Skills', icon: <Code2 size={14} /> },
+  { id: 'experience', label: 'Experience', icon: <Briefcase size={14} /> },
+  { id: 'projects', label: 'Projects', icon: <FolderKanban size={14} /> },
+  { id: 'enterprise', label: 'Enterprise', icon: <Building2 size={14} /> },
+  { id: 'terminal', label: 'Terminal', icon: <Terminal size={14} /> },
+  { id: 'contact', label: 'Contact', icon: <Mail size={14} /> },
 ];
 
 export default function Navbar({ theme, setTheme }: NavbarProps) {
@@ -45,7 +47,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
         const el = document.getElementById(sectionIds[i]);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 150) {
+          if (rect.top <= 160) {
             setActiveSection(sectionIds[i]);
             return;
           }
@@ -72,14 +74,20 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      const navOffset = window.innerWidth <= 768 ? 60 : 76;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
     setMobileOpen(false);
   };
 
   return (
     <>
-      <nav className={`navbar${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
+      <nav className={`navbar${scrolled ? ' scrolled' : ''}${mobileOpen ? ' menu-open' : ''}`} role="navigation" aria-label="Main navigation">
         <div className="navbar-inner">
           <button className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top">
             <span className="navbar-logo-dot" />
@@ -115,40 +123,40 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
             </button>
 
             <button
-              className="navbar-mobile-toggle"
-              onClick={() => setMobileOpen(true)}
-              aria-label="Open menu"
+              className={`navbar-mobile-toggle${mobileOpen ? ' active' : ''}`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileOpen}
             >
-              <Menu size={18} />
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile overlay always rendered, visibility controlled via CSS */}
+      {/* Mobile overlay */}
       <div
         className={`navbar-mobile-overlay${mobileOpen ? ' open' : ''}`}
         onClick={(e) => {
           if (e.target === e.currentTarget) setMobileOpen(false);
         }}
       >
-        <button className="navbar-mobile-close" onClick={() => setMobileOpen(false)} aria-label="Close menu">
-          <X size={20} />
-        </button>
-
-        {sections.map((section) => (
-          <button
-            key={section.id}
-            className={`navbar-mobile-link${activeSection === section.id ? ' active' : ''}`}
-            onClick={() => scrollTo(section.id)}
-          >
-            {section.icon}
-            {section.label}
-          </button>
-        ))}
+        <div className="navbar-mobile-links">
+          {sections.map((section) => (
+            <button
+              key={section.id}
+              className={`navbar-mobile-link${activeSection === section.id ? ' active' : ''}`}
+              onClick={() => scrollTo(section.id)}
+            >
+              {section.icon}
+              <span>{section.label}</span>
+            </button>
+          ))}
+        </div>
 
         <button className="navbar-mobile-cta" onClick={() => scrollTo('contact')}>
-          Contact Me
+          <span>Contact Me</span>
+          <ArrowUpRight size={14} strokeWidth={2.5} />
         </button>
       </div>
     </>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="electBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070a14"/>
+      <stop offset="50%" stop-color="#0f172e"/>
+      <stop offset="100%" stop-color="#141c38"/>
+    </linearGradient>
+    <radialGradient id="electGlow" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="electGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#electBg)"/>
+  <rect width="800" height="480" fill="url(#electGlow)"/>
+
+  <!-- Chrome Window -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#091024" stroke="#1c2b52" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#0f1938"/>
+  <rect x="40" y="60" width="720" height="12" fill="#0f1938"/>
+
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#080d1e" stroke="#1c2d54"/>
+  <text x="400" y="55" fill="#93c5fd" font-family="monospace" font-size="11" text-anchor="middle">https://election-app.vote/live-tally</text>
+
+  <!-- Navbar -->
+  <rect x="60" y="85" width="680" height="46" rx="8" fill="#111c3d" stroke="#22366b"/>
+  <text x="80" y="113" fill="#60A5FA" font-family="sans-serif" font-weight="900" font-size="16">🗳️ ELECTION SECURE VOTE</text>
+  <rect x="580" y="96" width="145" height="26" rx="6" fill="#10B981" fill-opacity="0.18" stroke="#10B981"/>
+  <text x="652" y="113" fill="#34D399" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">LIVE COUNTING ACTIVE</text>
+
+  <!-- Left: Candidate Ballot Cards -->
+  <rect x="60" y="145" width="340" height="280" rx="10" fill="#0c1530" stroke="#1e305e"/>
+  <text x="80" y="175" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">Verified Candidate Ballots</text>
+
+  <rect x="80" y="195" width="300" height="60" rx="8" fill="#121e42" stroke="#263d7a"/>
+  <circle cx="110" cy="225" r="16" fill="#3B82F6"/>
+  <text x="110" y="230" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">A</text>
+  <text x="140" y="218" fill="#F8FAFC" font-family="sans-serif" font-size="12" font-weight="bold">Candidate Alpha</text>
+  <text x="140" y="235" fill="#94A3B8" font-family="sans-serif" font-size="10">Digital Infrastructure Reform</text>
+  <text x="360" y="230" fill="#60A5FA" font-family="monospace" font-size="12" font-weight="bold" text-anchor="end">48.2%</text>
+
+  <rect x="80" y="265" width="300" height="60" rx="8" fill="#121e42" stroke="#263d7a"/>
+  <circle cx="110" cy="295" r="16" fill="#10B981"/>
+  <text x="110" y="300" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">B</text>
+  <text x="140" y="288" fill="#F8FAFC" font-family="sans-serif" font-size="12" font-weight="bold">Candidate Beta</text>
+  <text x="140" y="305" fill="#94A3B8" font-family="sans-serif" font-size="10">Public Health &amp; Education</text>
+  <text x="360" y="300" fill="#34D399" font-family="monospace" font-size="12" font-weight="bold" text-anchor="end">42.5%</text>
+
+  <rect x="80" y="335" width="300" height="60" rx="8" fill="#121e42" stroke="#263d7a"/>
+  <circle cx="110" cy="365" r="16" fill="#F59E0B"/>
+  <text x="110" y="370" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">C</text>
+  <text x="140" y="358" fill="#F8FAFC" font-family="sans-serif" font-size="12" font-weight="bold">Candidate Gamma</text>
+  <text x="140" y="375" fill="#94A3B8" font-family="sans-serif" font-size="10">Economic &amp; Trade Initiative</text>
+  <text x="360" y="370" fill="#FBBF24" font-family="monospace" font-size="12" font-weight="bold" text-anchor="end">9.3%</text>
+
+  <!-- Right: Real-time Analytics & Audit -->
+  <rect x="420" y="145" width="320" height="280" rx="10" fill="#0c1530" stroke="#1e305e"/>
+  <text x="440" y="175" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">Live Vote Tabulation</text>
+
+  <rect x="440" y="195" width="280" height="24" rx="12" fill="#17244d"/>
+  <rect x="440" y="195" width="135" height="24" rx="12" fill="#3B82F6"/>
+  <rect x="575" y="195" width="118" height="24" rx="0" fill="#10B981"/>
+  <rect x="693" y="195" width="27" height="24" rx="12" fill="#F59E0B"/>
+
+  <g transform="translate(440, 240)">
+    <rect width="135" height="65" rx="8" fill="#121e42" stroke="#263d7a"/>
+    <text x="12" y="24" fill="#94A3B8" font-family="sans-serif" font-size="10">Total Votes Cast</text>
+    <text x="12" y="50" fill="#F8FAFC" font-family="monospace" font-size="18" font-weight="bold">128,490</text>
+
+    <rect x="145" width="135" height="65" rx="8" fill="#121e42" stroke="#263d7a"/>
+    <text x="157" y="24" fill="#94A3B8" font-family="sans-serif" font-size="10">Verified Blockchain</text>
+    <text x="157" y="50" fill="#10B981" font-family="monospace" font-size="18" font-weight="bold">100%</text>
+  </g>
+
+  <rect x="440" y="325" width="280" height="75" rx="8" fill="#070d1e" stroke="#1b2a52"/>
+  <text x="455" y="350" fill="#60A5FA" font-family="monospace" font-size="11" font-weight="bold">AUDIT HASH: #7f8a9e01bc43</text>
+  <text x="455" y="375" fill="#94A3B8" font-family="sans-serif" font-size="10">Tamper-proof cryptographic ballot tracking and real-time voter turnout validation.</text>
+</svg>

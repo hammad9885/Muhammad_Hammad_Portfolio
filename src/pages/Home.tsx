@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import ScrollProgress from '../components/ScrollProgress';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
+import EducationSection from '../components/EducationSection';
 import SkillSection from '../components/SkillSection';
 import Experience from '../components/Experience';
 import FeaturedProject from '../components/FeaturedProject';
@@ -24,6 +25,7 @@ export default function Home() {
       <ScrollProgress />
       <HeroSection />
       <AboutSection />
+      <EducationSection />
       <SkillSection />
       <Experience />
       <FeaturedProject />

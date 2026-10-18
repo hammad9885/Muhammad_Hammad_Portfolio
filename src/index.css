@@ -13,8 +13,8 @@
   --bg4: #111827;
   --surface: rgba(255, 255, 255, 0.03);
   --surface-hover: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.15);
   --text: #e2e8f0;
   --text-secondary: #94a3b8;
   --muted: #64748b;
@@ -31,7 +31,7 @@
   --font-sans: 'Syne', system-ui, -apple-system, sans-serif;
   --font-mono: 'Space Mono', 'SF Mono', monospace;
   --nav-height: 64px;
-  --section-spacing: 6rem;
+  --section-spacing: 5.5rem;
 }
 
 [data-theme='light'] {
@@ -40,22 +40,24 @@
   --bg3: #f1f5f9;
   --bg4: #e2e8f0;
   --surface: rgba(0, 0, 0, 0.02);
-  --surface-hover: rgba(0, 0, 0, 0.04);
+  --surface-hover: rgba(0, 0, 0, 0.05);
   --border: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(0, 0, 0, 0.15);
+  --border-hover: rgba(0, 0, 0, 0.16);
   --text: #0f172a;
   --text-secondary: #334155;
   --muted: #64748b;
-  --accent: #0ea5e9;
+  --accent: #0284c7;
   --accent2: #7c3aed;
-  --accent-glow: rgba(14, 165, 233, 0.12);
+  --accent-glow: rgba(2, 132, 199, 0.15);
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.08);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-height) + 24px);
+  scroll-padding-top: calc(var(--nav-height) + 20px);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -64,9 +66,19 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background 0.35s ease, color 0.35s ease;
+  overflow-wrap: break-word;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -91,7 +103,7 @@ body {
   background: var(--muted);
 }
 
-img {
+img, svg, video, canvas {
   max-width: 100%;
   height: auto;
   display: block;
@@ -107,17 +119,30 @@ a {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
+  :root {
+    --section-spacing: 3.75rem;
+    --nav-height: 58px;
+  }
+
   .container {
     padding: 0 1.25rem;
   }
+}
 
+@media (max-width: 480px) {
   :root {
-    --section-spacing: 4rem;
+    --section-spacing: 3.25rem;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 }

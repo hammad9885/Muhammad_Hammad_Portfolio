@@ -1,4 +1,4 @@
-import { MessageCircle, Mail, Download } from 'lucide-react';
+import { MessageCircle, Mail, Download, Phone, MapPin } from 'lucide-react';
 import FadeIn from './FadeIn';
 import SectionHeader from './SectionHeader';
 import '../assets/css/Contact.css';
@@ -20,7 +20,7 @@ const LinkedinIcon = ({ size = 15 }: { size?: number }) => (
 const downloadCV = () => {
   const link = document.createElement('a');
   link.href = '/cv/Muhammad_Hammad_Resume.pdf';
-  link.download = 'Muhammad_Hammad_CV.pdf';
+  link.download = 'Muhammad_Hammad_Resume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -28,7 +28,7 @@ const downloadCV = () => {
 
 const openWhatsApp = () => {
   const message =
-    'Hi Muhammad Hammad, I came across your portfolio and would like to discuss a project opportunity with you. Are you available?';
+    'Hi Muhammad Hammad, I saw your portfolio and would like to discuss a project / job opportunity with you.';
   const encoded = encodeURIComponent(message);
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (isMobile) {
@@ -47,15 +47,29 @@ export default function ContactSection() {
         <FadeIn y={20}>
           <div className="contact-box">
             <h2>
-              Have a Project
+              Have a Project or Role
               <br />
               <span>in Mind?</span>
             </h2>
             <p>
-              I'm currently open to project opportunities, collaborations, and full-time roles.
-              Let's talk about how I can help build your next system.
+              I'm actively open to full-time engineering roles, enterprise consulting, and custom web applications.
+              Reach out and let's discuss how we can turn your requirements into reality.
             </p>
-            <p className="contact-email">mrhammadghg@gmail.com</p>
+
+            <div className="contact-meta-row">
+              <a href="tel:+923476789885" className="contact-meta-item">
+                <Phone size={14} />
+                <span>+92 347 6789885</span>
+              </a>
+              <a href="mailto:mrhammadghg@gmail.com" className="contact-meta-item">
+                <Mail size={14} />
+                <span>mrhammadghg@gmail.com</span>
+              </a>
+              <div className="contact-meta-item">
+                <MapPin size={14} />
+                <span>Qila Sunder Singh Awan Chowk, Gujranwala</span>
+              </div>
+            </div>
 
             <div className="contact-links">
               <a
@@ -87,17 +101,19 @@ export default function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-link"
-                aria-label="Email"
+                aria-label="Email Direct"
               >
                 <span className="contact-link-icon"><Mail size={15} /></span>
-                Email
+                Send Email
               </a>
             </div>
 
-            <button className="contact-cv-btn" onClick={downloadCV}>
-              <Download size={14} />
-              Download CV
-            </button>
+            <div className="contact-actions">
+              <button className="contact-cv-btn" onClick={downloadCV}>
+                <Download size={15} />
+                Download Full CV / Resume
+              </button>
+            </div>
           </div>
         </FadeIn>
       </div>

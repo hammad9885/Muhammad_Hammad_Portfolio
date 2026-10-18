@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="moodBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090514"/>
+      <stop offset="60%" stop-color="#160d2b"/>
+      <stop offset="100%" stop-color="#241445"/>
+    </linearGradient>
+    <radialGradient id="moodGlow" cx="75%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="moodGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#moodBg)"/>
+  <rect width="800" height="480" fill="url(#moodGlow)"/>
+
+  <!-- Chrome Window -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#0c071c" stroke="#2c1a4d" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#140b2b"/>
+  <rect x="40" y="60" width="720" height="12" fill="#140b2b"/>
+
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#080414" stroke="#2b184a"/>
+  <text x="400" y="55" fill="#c4b5fd" font-family="monospace" font-size="11" text-anchor="middle">https://moodsanalytica.com</text>
+
+  <!-- Top Hero Bar -->
+  <rect x="60" y="85" width="680" height="46" rx="8" fill="#170c30" stroke="#321a61"/>
+  <text x="80" y="113" fill="#C084FC" font-family="sans-serif" font-weight="900" font-size="16">MOODS ANALYTICA</text>
+  <text x="520" y="112" fill="#94A3B8" font-family="sans-serif" font-size="11">Business Meet</text>
+  <text x="610" y="112" fill="#94A3B8" font-family="sans-serif" font-size="11">Networking</text>
+  <rect x="670" y="95" width="60" height="26" rx="5" fill="url(#moodGrad)"/>
+  <text x="700" y="112" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Join</text>
+
+  <!-- Main Hero Card -->
+  <rect x="60" y="145" width="410" height="280" rx="10" fill="#120826" stroke="#29154f"/>
+  <rect x="80" y="170" width="180" height="24" rx="12" fill="#3b0764" fill-opacity="0.4" stroke="#8b5cf6"/>
+  <text x="170" y="186" fill="#D8B4FE" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">BUSINESS NETWORKING HUB</text>
+
+  <text x="80" y="225" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="22">Connect. Collaborate.</text>
+  <text x="80" y="255" fill="#F472B6" font-family="sans-serif" font-weight="900" font-size="22">Grow Your Enterprise.</text>
+  <text x="80" y="285" fill="#94A3B8" font-family="sans-serif" font-size="12">Next.js &amp; React corporate meeting platform with dynamic attendee matchmaking and lead analytics.</text>
+
+  <rect x="80" y="325" width="140" height="38" rx="8" fill="url(#moodGrad)"/>
+  <text x="150" y="348" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Schedule Meeting ⚡</text>
+
+  <!-- Right Side: Analytics Graphs -->
+  <rect x="485" y="145" width="255" height="280" rx="10" fill="#120826" stroke="#29154f"/>
+  <text x="505" y="175" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="bold">Engagement Metrics</text>
+
+  <!-- Stat 1 -->
+  <rect x="505" y="195" width="100" height="60" rx="8" fill="#1a0c38" stroke="#391b6e"/>
+  <text x="515" y="218" fill="#94A3B8" font-family="sans-serif" font-size="10">Active Meets</text>
+  <text x="515" y="242" fill="#A78BFA" font-family="sans-serif" font-size="18" font-weight="bold">1,420+</text>
+
+  <!-- Stat 2 -->
+  <rect x="620" y="195" width="100" height="60" rx="8" fill="#1a0c38" stroke="#391b6e"/>
+  <text x="630" y="218" fill="#94A3B8" font-family="sans-serif" font-size="10">Match Rate</text>
+  <text x="630" y="242" fill="#34D399" font-family="sans-serif" font-size="18" font-weight="bold">94.8%</text>
+
+  <!-- Chart Preview -->
+  <rect x="505" y="270" width="215" height="135" rx="8" fill="#1a0c38" stroke="#391b6e"/>
+  <text x="520" y="295" fill="#E2E8F0" font-family="sans-serif" font-size="11" font-weight="bold">Weekly Attendance</text>
+
+  <!-- Bar Chart Graphics -->
+  <rect x="525" y="350" width="20" height="35" rx="3" fill="#7C3AED"/>
+  <rect x="555" y="330" width="20" height="55" rx="3" fill="#8B5CF6"/>
+  <rect x="585" y="315" width="20" height="70" rx="3" fill="#A855F7"/>
+  <rect x="615" y="305" width="20" height="80" rx="3" fill="#C084FC"/>
+  <rect x="645" y="325" width="20" height="60" rx="3" fill="#EC4899"/>
+  <rect x="675" y="295" width="20" height="90" rx="3" fill="#F43F5E"/>
+</svg>

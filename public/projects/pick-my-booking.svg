@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="flyBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05101a"/>
+      <stop offset="50%" stop-color="#0b1e33"/>
+      <stop offset="100%" stop-color="#112d4d"/>
+    </linearGradient>
+    <radialGradient id="flyGlow" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#flyBg)"/>
+  <rect width="800" height="480" fill="url(#flyGlow)"/>
+
+  <!-- Chrome Window -->
+  <rect x="40" y="30" width="720" height="420" rx="14" fill="#071424" stroke="#163152" stroke-width="1.5"/>
+  <rect x="40" y="30" width="720" height="42" rx="14" fill="#0c2038"/>
+  <rect x="40" y="60" width="720" height="12" fill="#0c2038"/>
+
+  <!-- Traffic Dots -->
+  <circle cx="68" cy="51" r="5.5" fill="#EF4444"/>
+  <circle cx="88" cy="51" r="5.5" fill="#F59E0B"/>
+  <circle cx="108" cy="51" r="5.5" fill="#10B981"/>
+
+  <!-- URL Bar -->
+  <rect x="240" y="40" width="320" height="22" rx="6" fill="#06111f" stroke="#173459"/>
+  <text x="400" y="55" fill="#7dd3fc" font-family="monospace" font-size="11" text-anchor="middle">https://pickmybooking.com</text>
+
+  <!-- Flight Search Banner -->
+  <rect x="60" y="85" width="680" height="46" rx="8" fill="#0e2645" stroke="#1c4578"/>
+  <text x="80" y="113" fill="#38BDF8" font-family="sans-serif" font-weight="900" font-size="16">✈️ PICK MY BOOKING</text>
+  <text x="440" y="112" fill="#94A3B8" font-family="sans-serif" font-size="11">Flights</text>
+  <text x="510" y="112" fill="#94A3B8" font-family="sans-serif" font-size="11">Hotels</text>
+  <text x="580" y="112" fill="#94A3B8" font-family="sans-serif" font-size="11">Transfers</text>
+  <rect x="655" y="95" width="75" height="26" rx="5" fill="url(#skyGrad)"/>
+  <text x="692" y="112" fill="#041221" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Log In</text>
+
+  <!-- Flight Search Bar -->
+  <rect x="60" y="145" width="680" height="75" rx="10" fill="#0a1d36" stroke="#183963"/>
+  <text x="80" y="170" fill="#94A3B8" font-family="sans-serif" font-size="10" font-weight="bold">SEARCH CHEAP FLIGHTS (REACT + REDUX + BOOTSTRAP)</text>
+
+  <rect x="80" y="180" width="130" height="30" rx="4" fill="#071526" stroke="#1d4273"/>
+  <text x="90" y="200" fill="#F8FAFC" font-family="sans-serif" font-size="11">ISB (Islamabad)</text>
+
+  <text x="220" y="200" fill="#38BDF8" font-family="sans-serif" font-size="13">➔</text>
+
+  <rect x="240" y="180" width="130" height="30" rx="4" fill="#071526" stroke="#1d4273"/>
+  <text x="250" y="200" fill="#F8FAFC" font-family="sans-serif" font-size="11">DXB (Dubai Intl)</text>
+
+  <rect x="385" y="180" width="130" height="30" rx="4" fill="#071526" stroke="#1d4273"/>
+  <text x="395" y="200" fill="#F8FAFC" font-family="sans-serif" font-size="11">Dep: Oct 24, 2026</text>
+
+  <rect x="530" y="180" width="90" height="30" rx="4" fill="#071526" stroke="#1d4273"/>
+  <text x="540" y="200" fill="#F8FAFC" font-family="sans-serif" font-size="11">1 Passenger</text>
+
+  <rect x="635" y="180" width="90" height="30" rx="6" fill="url(#skyGrad)"/>
+  <text x="680" y="200" fill="#041221" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SEARCH 🔍</text>
+
+  <!-- Flight Results -->
+  <g transform="translate(60, 235)">
+    <!-- Result 1 -->
+    <rect width="680" height="85" rx="8" fill="#0b203b" stroke="#1b4170"/>
+    <text x="25" y="35" fill="#38BDF8" font-family="sans-serif" font-size="13" font-weight="bold">Emirates Airlines (EK-613)</text>
+    <text x="25" y="58" fill="#94A3B8" font-family="monospace" font-size="11">03h 25m • Non-Stop Direct</text>
+    <text x="250" y="38" fill="#F8FAFC" font-family="monospace" font-size="16" font-weight="bold">09:40 ➔ 12:05</text>
+    <text x="250" y="58" fill="#94A3B8" font-family="sans-serif" font-size="10">ISB to DXB</text>
+    <text x="530" y="42" fill="#38BDF8" font-family="monospace" font-size="18" font-weight="bold">PKR 142,500</text>
+    <rect x="530" y="52" width="125" height="24" rx="4" fill="url(#skyGrad)"/>
+    <text x="592" y="68" fill="#051324" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Select Flight</text>
+
+    <!-- Result 2 -->
+    <rect y="95" width="680" height="85" rx="8" fill="#0b203b" stroke="#1b4170"/>
+    <text x="25" y="130" fill="#38BDF8" font-family="sans-serif" font-size="13" font-weight="bold">Qatar Airways (QR-633)</text>
+    <text x="25" y="153" fill="#94A3B8" font-family="monospace" font-size="11">05h 10m • 1 Stop (DOH)</text>
+    <text x="250" y="133" fill="#F8FAFC" font-family="monospace" font-size="16" font-weight="bold">11:15 ➔ 15:25</text>
+    <text x="250" y="153" fill="#94A3B8" font-family="sans-serif" font-size="10">ISB via Doha to DXB</text>
+    <text x="530" y="137" fill="#38BDF8" font-family="monospace" font-size="18" font-weight="bold">PKR 128,900</text>
+    <rect x="530" y="147" width="125" height="24" rx="4" fill="url(#skyGrad)"/>
+    <text x="592" y="163" fill="#051324" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Select Flight</text>
+  </g>
+</svg>

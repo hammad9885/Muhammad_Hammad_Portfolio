@@ -21,9 +21,9 @@ const openWhatsApp = () => {
   const encoded = encodeURIComponent(message);
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (isMobile) {
-    window.location.href = `whatsapp://send?phone=923476789885&text=${encoded}`;
+    window.location.href = `whatsapp://send?phone=923713734182&text=${encoded}`;
   } else {
-    window.open(`https://web.whatsapp.com/send?phone=923476789885&text=${encoded}`, '_blank');
+    window.open(`https://web.whatsapp.com/send?phone=923713734182&text=${encoded}`, '_blank');
   }
 };
 

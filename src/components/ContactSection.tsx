@@ -32,9 +32,9 @@ const openWhatsApp = () => {
   const encoded = encodeURIComponent(message);
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (isMobile) {
-    window.location.href = `whatsapp://send?phone=923476789885&text=${encoded}`;
+    window.location.href = `whatsapp://send?phone=923713734182&text=${encoded}`;
   } else {
-    window.open(`https://web.whatsapp.com/send?phone=923476789885&text=${encoded}`, '_blank');
+    window.open(`https://web.whatsapp.com/send?phone=923713734182&text=${encoded}`, '_blank');
   }
 };
 
@@ -57,9 +57,9 @@ export default function ContactSection() {
             </p>
 
             <div className="contact-meta-row">
-              <a href="tel:+923476789885" className="contact-meta-item">
+              <a href="tel:+923713734182" className="contact-meta-item">
                 <Phone size={14} />
-                <span>+92 347 6789885</span>
+                <span>+92 371 3734182</span>
               </a>
               <a href="mailto:mrhammadghg@gmail.com" className="contact-meta-item">
                 <Mail size={14} />

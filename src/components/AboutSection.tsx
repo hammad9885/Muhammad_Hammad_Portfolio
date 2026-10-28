@@ -107,7 +107,7 @@ export default function AboutSection() {
                   <div className="about-info-icon"><Phone size={16} /></div>
                   <div>
                     <div className="about-info-label">Phone / WhatsApp</div>
-                    <div className="about-info-value">+92 347 6789885 (03476789885)</div>
+                    <div className="about-info-value">+92 371 3734182 (03713734182)</div>
                   </div>
                 </div>
                 <div className="about-info-item">

@@ -80,7 +80,7 @@ const commands: Record<string, string[]> = {
   contact: [
     '<span class="accent">Get In Touch:</span>',
     '',
-    '  <span class="dim">Phone / WhatsApp:</span> +92 347 6789885 (03476789885)',
+    '  <span class="dim">Phone / WhatsApp:</span> +92 371 3734182 (03713734182)',
     '  <span class="dim">Email:</span>            mrhammadghg@gmail.com',
     '  <span class="dim">GitHub:</span>           https://github.com/hammad9885',
     '  <span class="dim">LinkedIn:</span>         https://www.linkedin.com/in/muhammad-hammad-dev/',

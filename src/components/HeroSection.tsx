@@ -61,9 +61,9 @@ export default function HeroSection() {
               <MapPin size={13} />
               <span>Gujranwala, Pakistan</span>
             </div>
-            <a href="tel:+923476789885" className="hero-contact-item">
+            <a href="tel:+923713734182" className="hero-contact-item">
               <Phone size={13} />
-              <span>+92 347 6789885</span>
+              <span>+92 371 3734182</span>
             </a>
             <a href="mailto:mrhammadghg@gmail.com" className="hero-contact-item">
               <Mail size={13} />
